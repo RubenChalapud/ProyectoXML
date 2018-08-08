@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="creacionarchivosxml.FXMLDocumentController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="512.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="creacionarchivosxml.FXMLDocumentController">
+   <children>
+      <Label fx:id="Ltitulo" layoutX="48.0" layoutY="14.0" text="Agregar Empleados" textAlignment="CENTER">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="LNombre" layoutX="48.0" layoutY="118.0" text="Nombre" />
+      <Label fx:id="LDireccion" layoutX="48.0" layoutY="165.0" text="Direccion" />
+      <Label fx:id="LEdad" layoutX="48.0" layoutY="218.0" text="Edad" />
+      <Label fx:id="LCodEmpleado" layoutX="48.0" layoutY="270.0" text="Codigo Empleado" />
+      <Label fx:id="LDepartamento" layoutX="48.0" layoutY="332.0" text="Departamento" />
+      <TextField fx:id="TNombre" layoutX="193.0" layoutY="114.0" />
+      <TextField fx:id="TDireccion" layoutX="193.0" layoutY="161.0" />
+      <TextField fx:id="TEdad" layoutX="193.0" layoutY="214.0" />
+      <TextField fx:id="TCodigo" layoutX="193.0" layoutY="266.0" />
+      <TextField fx:id="TDepartamento" layoutX="193.0" layoutY="328.0" />
+      <Button fx:id="AgregarALista" layoutX="92.0" layoutY="411.0" mnemonicParsing="false" onAction="#AgregarEmpleadoLista" text="Agragar a la Lista" />
+      <Button fx:id="GuardarAXML" layoutX="268.0" layoutY="411.0" mnemonicParsing="false" text="Guardar Archivo XML" />
+   </children>
 </AnchorPane>

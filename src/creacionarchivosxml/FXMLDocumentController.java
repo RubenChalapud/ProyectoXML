@@ -6,11 +6,14 @@
 package creacionarchivosxml;
 
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import modelo.Empleado;
 
 /**
  *
@@ -19,17 +22,50 @@ import javafx.scene.control.Label;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Label label;
+    private Label LNombre;
+    @FXML
+    private Label LDireccion;
+    @FXML
+    private Label LEdad;
+    @FXML
+    private Label LCodEmpleado;
+    @FXML
+    private Label LDepartamento;
+    @FXML
+    private Label Ltitulo;
+    @FXML
+    private TextField TNombre;
+    @FXML
+    private TextField TDireccion;
+    @FXML
+    private TextField TEdad;
+    @FXML
+    private TextField TCodigo;
+    @FXML
+    private TextField TDepartamento;
+    
+    LinkedList<Empleado> listaEmpleados;
+    
+
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private void AgregarEmpleadoLista(ActionEvent event) {
+        String nombre = TNombre.getText();
+        String direccion = TDireccion.getText();
+        int edad = Integer.parseInt(TEdad.getText());
+        String codigoEmpleado = TCodigo.getText();
+        String departamento = TDepartamento.getText();
+        
+        Empleado objE = new Empleado(codigoEmpleado, departamento, nombre, direccion, edad);
+        listaEmpleados.add(objE);
+        
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        listaEmpleados= new LinkedList<>();
+        
     }    
     
 }
