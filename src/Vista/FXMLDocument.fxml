@@ -25,6 +25,6 @@
       <TextField fx:id="TCodigo" layoutX="193.0" layoutY="266.0" />
       <TextField fx:id="TDepartamento" layoutX="193.0" layoutY="328.0" />
       <Button fx:id="AgregarALista" layoutX="92.0" layoutY="411.0" mnemonicParsing="false" onAction="#AgregarEmpleadoLista" text="Agragar a la Lista" />
-      <Button fx:id="GuardarAXML" layoutX="268.0" layoutY="411.0" mnemonicParsing="false" text="Guardar Archivo XML" />
+      <Button fx:id="GuardarAXML" layoutX="268.0" layoutY="411.0" mnemonicParsing="false" onAction="#crearArchivoXML" text="Guardar Archivo XML" />
    </children>
 </AnchorPane>
